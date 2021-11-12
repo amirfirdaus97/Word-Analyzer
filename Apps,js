@@ -1,0 +1,136 @@
+import{ StatusBar } from 'expo-status-bar';
+// import React from ' react ';
+import React, {Component} from 'react';
+import { StyleSheet, Text,TextInput,SafeAreaView,View,Button} from 'react-native';
+
+export default class App extends Component { 
+  
+  constructor(){
+  super(); 
+  this.state = {
+   string:'',
+   CountVowel:0,
+   CountConson:0,
+   NoOfCharacter:0,
+   Words:''
+  } 
+  }
+  
+  
+
+  analyze() {
+   this.state.CountVowel=0;
+   this.state.CountConson=0;
+   const Words=this.state.string.split('');
+   this.state.NoOfCharacter=Words.length;
+   for (let i = 0; i< Words.length; i++) {
+   if(Words[i]=='a'||Words[i]=='e'||Words[i]=='i'||Words[i]=='o'||Words[i]=='u'||
+   Words[i]=='A'||Words[i]=='E'||Words[i]=='I'||Words[i]=='O'||Words[i]=='U')
+    {
+     this.state.CountVowel+=1;
+    }
+    else{
+     this.state.CountConson+=1;
+    }
+   }
+   this.state.Words=Words.join('');
+   this.setState({ string: '' })
+   };
+
+   
+  
+
+  render() {
+  return (
+   <View style={styles.container}>
+  <View style={styles.container}>
+  <Text style={styles.header}>A Word Analyzer</Text>
+  <table>
+   <tr>
+   <td>Word</td> 
+     <td><TextInput style={styles.TextInput} onChangeText={(string) => this.setState({string})} placeholder=' '/></td>
+   </tr>
+
+    
+   <tr> <td>
+
+   </td>
+     <td><View style={styles.button}>
+           <Button color="#817E7E" 
+        title="Analyze"
+        onPress={() => this.analyze() }/>
+            </View></td>
+   </tr>
+
+
+   <tr>
+        <td>
+               Word
+        </td>
+       <td>   :{this.state.Words}
+       </td>
+   </tr>
+
+   <tr>
+        <td>
+           No of Consonants 
+       </td>
+     <td>:{this.state.CountConson}</td>
+   </tr>
+   <tr>
+       <td> No of Vowels </td>
+     <td>:{this.state.CountVowel}</td>
+   </tr>
+   <tr>
+     <td> No of Characters </td>
+     <td>:{this.state.NoOfCharacter}</td>
+   </tr>
+
+   </table>
+  </View>
+   
+  </View>
+  ); 
+  }}
+
+ const styles = StyleSheet.create({ 
+  container: {
+  flex: 1,
+  alignItems: 'center',
+  backgroundColor: '#9ECFFD',
+  }, 
+  
+  ButtonContainer:{
+    marginHorizontal: 50,
+    alignItems: 'center', 
+    marginTop: 10,
+  },
+
+  button:{
+   float: 'left'
+
+  },
+TextInput:{
+
+ backgroundColor: '#FFFFFF',
+},
+
+table:{
+ alignItems:'center',
+ textAlign:'center'
+},
+  header: {
+
+  marginTop: 60,
+  marginBottom:40,
+  fontSize: 30, 
+  textAlign: 'center', 
+  margin: 10,
+  },
+  
+  contents: {
+  textAlign: 'center',
+  color: '#333333', 
+  marginBottom: 5,
+  } 
+ })
