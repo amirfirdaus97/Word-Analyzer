@@ -1,7 +1,7 @@
 Step to develop A Word Analyzer:
 
-1. We will use the function of super() to  reference variable that is used to refer parent class constructors
-2. We need to initialize  which are string,CountVowel,CountConson,NoOfCharacter,Words
+1. We will use the function of super() to  reference variable that is used to refer parent class constructors.
+2. We need to initialize  which are string,CountVowel,CountConson,NoOfCharacter,Words.
 3.Create the title ‘ A Word Analyzer’  and text input for the user to put the word in the box.
 4.Create a button and the function of button will analyse the word that user insert at the box. 
  5. For function CountVowel and CountConson ,we need  to set 0, so when the user enter new word it will reset to zero.
