@@ -23,9 +23,9 @@ export default class App extends Component {
    this.state.CountConson=0;
    const Words=this.state.string.split('');
    this.state.NoOfCharacter=Words.length;
-   for (let i = 0; i< Words.length; i++) {
-   if(Words[i]=='a'||Words[i]=='e'||Words[i]=='i'||Words[i]=='o'||Words[i]=='u'||
-   Words[i]=='A'||Words[i]=='E'||Words[i]=='I'||Words[i]=='O'||Words[i]=='U')
+   for (let j = 0; j< Words.length; j++) {
+   if(Words[j]=='a'||Words[j]=='e'||Words[j]=='i'||Words[j]=='o'||Words[j]=='u'||
+   Words[j]=='A'||Words[j]=='E'||Words[j]=='I'||Words[j]=='O'||Words[j]=='U')
     {
      this.state.CountVowel+=1;
     }
@@ -56,7 +56,7 @@ export default class App extends Component {
 
    </td>
      <td><View style={styles.button}>
-           <Button color="#817E7E" 
+           <Button  
         title="Analyze"
         onPress={() => this.analyze() }/>
             </View></td>
@@ -97,7 +97,6 @@ export default class App extends Component {
   container: {
   flex: 1,
   alignItems: 'center',
-  backgroundColor: '#9ECFFD',
   }, 
   
   ButtonContainer:{
@@ -112,7 +111,7 @@ export default class App extends Component {
   },
 TextInput:{
 
- backgroundColor: '#FFFFFF',
+ backgroundColor: '#9ECFFD',
 },
 
 table:{
@@ -123,14 +122,14 @@ table:{
 
   marginTop: 60,
   marginBottom:40,
-  fontSize: 30, 
+  fontSize: 50, 
   textAlign: 'center', 
   margin: 10,
   },
   
   contents: {
   textAlign: 'center',
-  color: '#333333', 
+  color: '#33333', 
   marginBottom: 5,
   } 
  })
