@@ -1,11 +1,17 @@
-Step to develop A Word Analyzer:
+> Why do I have a folder named ".expo" in my project?
 
-1. We will use the function of super() to  reference variable that is used to refer parent class constructors.
-2. We need to initialize  which are string,CountVowel,CountConson,NoOfCharacter,Words.
-3. Create the title ‘ A Word Analyzer’  and text input for the user to put the word in the box.
-4. Create a button and the function of button will analyse the word that user insert at the box. 
-5. For function CountVowel and CountConson ,we need  to set 0, so when the user enter new word it will reset to zero.
-6. For the function Words,the user will enter the word and using split function, it will split the word into vowel and consonant by using the loop.It will add 1 if vowel word and for the consonant it will add count 1. 
-7. For the function join, it will combine the word from function Words. 
-8. we will create the text input that can display all the output that we need which are word, no of consonants ,no of vowels and no of characters. 
-9. the user can used the word analyser by type the word they need and click the button analyze to get the result. 
+The ".expo" folder is created when an Expo project is started using "expo start" command.
+
+> What does the "packager-info.json" file contain?
+
+The "packager-info.json" file contains port numbers and process PIDs that are used to serve the application to the mobile device/simulator.
+
+> What does the "settings.json" file contain?
+
+The "settings.json" file contains the server configuration that is used to serve the application manifest.
+
+> Should I commit the ".expo" folder?
+
+No, you should not share the ".expo" folder. It does not contain any information that is relevant for other developers working on the project, it is specific to your machine.
+
+Upon project creation, the ".expo" folder is already added to your ".gitignore" file.
